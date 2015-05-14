@@ -1,0 +1,106 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>
+        {% block title %}
+            Pavone Events
+        {% endblock title %}
+    </title>
+    {% block styling %}
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/reset.css' %}">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'materialize/css/materialize.css'%}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    {% endblock %}
+</head>
+<body>
+    {# <div id="wrapper"> #}
+        <header>
+            <nav class = "navbar">
+                <h3 id="logo">pavone</h3>
+            </nav>
+        </header>
+        <div class="row" id="content">
+            <div class="col s4 side">
+              <div class="card  grey lighten-3 side-card">
+                <div class="card-content black-text">
+                   <ul id="side-list">
+                        <li><a href="#"><i class="mdi-action-home"></i>Home</a></li>
+                        <li><a href="#"><i class="mdi-av-play-shopping-bag"></i>Gallery</a></li>
+                        <li><a href="#"><i class="mdi-av-mic"></i>Testimonies</a></li>
+                        <li><a href="#"><i class="mdi-av-recent-actors"></i>About</a></li>
+                        <form>
+                            <label><h6>Let us work for you</h6></label>
+                            <input placeholder="Name" id="name" type="text" class="validate">
+                            <input placeholder="Venue of event" id="name" type="text" class="validate">
+                            <input placeholder="Date of event" id="name" type="date" class="validate">
+                              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="mdi-content-send right"></i>
+                              </button>
+                        </form>
+                    </ul> 
+                    </div>
+                </div>
+            </div>
+
+              <div class="col s9 word">
+
+                {% block content%}
+
+                {% endblock %}
+                
+              </div>
+        </div>
+
+        <div id="footer">            
+            {% block footer %}       
+              <footer class="footer">
+                <div class="footer-text">
+                  <div class="footer-container">
+                    Made in <strong>Lagos </strong>by Andela Fellows.
+                  </div>
+                </div>
+              </footer>
+              {% endblock %}
+        </div>
+    {# </div> #}
+
+    {% block javascript %}
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'materialize/js/materialize.js' %}"></script>
+    {% endblock %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.modal-trigger').leanModal({
+                dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                opacity: .5, // Opacity of modal background
+                in_duration: 300, // Transition in duration
+                out_duration: 200, // Transition out duration
+            });
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrain_width: false, // Does not change width of dropdown to that of the activator
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: false // Displays dropdown below the button
+            });
+
+            $('select').material_select();
+            $(".dropdown-button").dropdown();
+        });
+    </script>
+
+    {% block local_js %}
+        
+    {% endblock local_js %}
+</body>
+</html>

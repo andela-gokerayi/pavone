@@ -1,0 +1,110 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  height:100%;
+  /*position:relative;*/
+}
+
+#logo {
+    margin: 0;
+    margin-left: 5%;
+    font-family: 'Lobster', cursive;
+}
+
+header {
+    height: 80px;
+}
+
+.navbar {
+  background-color: rgb(124, 65, 124) !important;
+  line-height: 7px;
+  position: fixed;
+  z-index: 2000;
+}
+
+#content {
+  padding-bottom: 70px;
+  position: static;
+  margin-top: 45px;
+}
+
+.short-word {
+  font-family: 'Lobster Two', cursive;
+  font-size: x-large;
+  font-style: oblique;
+  width: 75%;
+  margin-left: 21%;
+  margin-top: 45px;
+}
+
+.side {
+    position: fixed;
+    bottom: 0;
+    top: 50px;
+    margin-top: 70px;
+    margin-left: 25px !important;
+    width: 24% !important;
+}
+
+#side-list {
+    width: 73%;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.side-card{
+    background: rgb(124, 65, 124)
+}
+
+.card a {
+    color: #71706E !important;
+}
+
+.word {
+    /*position: fixed;*/
+    margin-left: 19% !important;
+    /*margin-top: 32%;*/
+    /*overflow-y: scroll; */
+    line-height: 25px
+}
+
+.slider {
+    width: 75% !important;
+    margin-left: 21%;
+}
+
+.slider ul.slides li img{
+    width: 100%;
+}
+
+.indicator-item {
+    margin: 0 !important;
+}
+
+#footer {
+  height:80px;
+  position: relative;
+  bottom:0;
+  left:0;
+  right: 0;
+  background-color: rgb(124, 65, 124);
+  z-index: 2000;
+}
+
+.footer-text {
+  margin-top: 100px;
+  color: #fff;
+}
+
+.footer-container {
+  text-align: center;
+  margin-top: 25px;
+  position: absolute;
+  margin-left: 40%;
+}
