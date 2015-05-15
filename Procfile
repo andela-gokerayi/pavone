@@ -1,1 +1,1 @@
-web: gunicorn pavone.wsgi --log-file -
+web: gunicorn library.wsgi 
