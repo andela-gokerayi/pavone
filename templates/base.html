@@ -33,10 +33,10 @@
               <div class="card  grey lighten-3 side-card">
                 <div class="card-content black-text">
                    <ul id="side-list">
-                        <li><a href="#"><i class="mdi-action-home"></i>Home</a></li>
-                        <li><a href="#"><i class="mdi-av-play-shopping-bag"></i>Gallery</a></li>
-                        <li><a href="#"><i class="mdi-av-mic"></i>Testimonies</a></li>
-                        <li><a href="#"><i class="mdi-av-recent-actors"></i>About</a></li>
+                        <li><a href="{% url "home" %}"><i class="mdi-action-home"></i>Home</a></li>
+                        <li><a href="{% url "gallery" %}"><i class="mdi-av-play-shopping-bag"></i>Gallery</a></li>
+                        <li><a href="{% url "testimony" %}"><i class="mdi-av-mic"></i>Testimonies</a></li>
+                        <li><a href="{% url "about" %}"><i class="mdi-av-recent-actors"></i>About</a></li>
                         <form>
                             <label><h6>Let us work for you</h6></label>
                             <input placeholder="Name" id="name" type="text" class="validate">
@@ -64,6 +64,12 @@
             {% block footer %}       
               <footer class="footer">
                 <div class="footer-text">
+                    <div id="social-feeds">
+                        <a href="okerayibabatunde@yahoo.com"><img src="{% static "images/mailto.png" %}" class="social-media"></a>
+                        <a href="www.facebook.com/ibroju"><img src="{% static "images/facebook.png" %}" class="social-media"></a>
+                        <a href="www.twitter.com/saynt_han"><img src="{% static "images/twitter.png" %}" class="social-media"></a>
+                        <a href="www.linkedin.com/"><img src="{% static "images/linkedin.png" %}" class="social-media"></a>
+                    </div>
                   <div class="footer-container">
                     Made in <strong>Lagos </strong>by Andela Fellows.
                   </div>
@@ -71,7 +77,6 @@
               </footer>
               {% endblock %}
         </div>
-    {# </div> #}
 
     {% block javascript %}
         <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>

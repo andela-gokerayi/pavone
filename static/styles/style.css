@@ -5,8 +5,8 @@ html, body {
 }
 
 #wrapper {
-  height:100%;
-  /*position:relative;*/
+  height:90%;
+  position:relative;
 }
 
 #logo {
@@ -45,7 +45,7 @@ header {
     position: fixed;
     bottom: 0;
     top: 50px;
-    margin-top: 70px;
+    margin-top: 57px;
     margin-left: 25px !important;
     width: 24% !important;
 }
@@ -87,6 +87,38 @@ header {
     margin: 0 !important;
 }
 
+.ceo-remarks {
+  line-height: 20px;
+}
+
+.ceo-pics {
+  position: relative;
+  height: 155px;
+  margin: 0;
+}
+
+.picture {
+    border: inset;
+    border-radius: 100%;
+    width: 246px;
+  /*margin-top: 20px;*/
+    margin-left: 183px;
+}
+
+.ceo-name {
+  margin: 140px 0 7px;
+  color: #444444;
+}
+
+.ceo-field {
+    text-align: center;
+    margin-right: 85px
+}
+
+.vision, .mission {
+  font-style: italic;
+}
+
 #footer {
   height:80px;
   position: relative;
@@ -98,13 +130,26 @@ header {
 }
 
 .footer-text {
-  margin-top: 100px;
-  color: #fff;
+    margin-top: 100px;
+    color: #fff;
 }
 
 .footer-container {
   text-align: center;
-  margin-top: 25px;
+  float: left;
+  margin-top: 59px;
   position: absolute;
-  margin-left: 40%;
+  margin-left: 3%;
+}
+
+#social-feeds {
+    float: right;
+    margin-right: 3%;
+    padding-left: 18px;
+    padding-top: 24px;
+    letter-spacing: 15px;
+}
+
+.social-media {
+    width: 33px;
 }
